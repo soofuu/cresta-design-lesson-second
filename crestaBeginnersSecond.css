@@ -1,0 +1,308 @@
+html{
+    font-size:16px;
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    text-decoration: none;
+    color:white;
+    font-weight:700;
+}
+a:active{
+    opacity: 0.7;
+}
+
+h3{
+    font-weight:700;
+    font-size:1.5rem;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+p{
+    font-weight:700;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align:bottom;
+    object-fit: cover;
+}
+
+.header{
+    height:10vh;
+    color:#FFF;
+    background-color:#1B1310;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 120px;
+    border-bottom: solid 2px #FFF;
+}
+.header-list{
+    display:flex;
+}
+.header-item{
+    margin-right:50px;
+}
+.header-item:last-child{
+    margin-right: 0px;
+}
+.burger-btn{
+    display: none;
+}
+.fv{
+    height:90vh;
+    background-image: url(./img/fv-bgi@2x.jpg);
+    background-color:#1B1310;
+    color:#FFF;
+    letter-spacing:0.05em;
+/*子要素を上下中央に*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 100px;
+/*背景画像*/
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.fv p{
+    display: block;
+    font-size: 4rem;
+    padding: 35px 42px;
+    border: solid 2px #FFF;
+}
+
+/*各セクション共通*/
+.section-wrapper{
+    padding:0px 15% 150px;
+}
+.section-title {
+    font-size:2.25rem;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 2em;
+}
+
+/*Aboutセクション*/
+.about-title{
+    margin-bottom:1.75em;
+    letter-spacing:0.1em;
+    line-height: 2;
+}
+.about-text{
+    letter-spacing:0.05em;
+    line-height:2;
+}
+
+/*Serviceセクション*/
+.service-item{
+    display: flex;
+    margin-bottom:3rem;
+    align-items: center;
+    height: auto;
+    justify-content: space-between;
+}
+.service-img{
+    display: block;
+    width:30vw;
+}
+.service-img>img{
+    width:30vw;
+}
+.service-description{
+    width:46%;
+}
+.service-title{
+    margin-bottom:1.75em;
+    letter-spacing:0.1em;
+    line-height: 2;
+}
+.service-text{
+    letter-spacing:0.05em;
+    line-height:2;
+}
+.reverce{
+    flex-direction: row-reverse;
+}
+
+/*Newsセクション*/
+.news-list{
+    display: flex;
+    justify-content: space-between;
+}
+.news-item{
+    display: block;
+    width:20vw;
+    height:auto;
+    box-shadow: 0px 1px 10px #707070;
+}
+.news-img{
+    display: block;
+    width:20vw;
+}
+.news-img>img{
+    width:20vw;
+}
+.news-text{
+    letter-spacing:0.05em;
+    line-height:2;
+    color:#1B1310;
+    padding:1.5rem 2rem;
+}
+
+/*Contactセクション*/
+.contact-form{
+    max-width:80%;
+    margin:0 auto;
+}
+.form-item{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+.form-item>label{
+    margin-bottom: 0.5rem;
+}
+.form-item>label>p{
+    font-size: 1.2rem;
+}
+.form-item>input,.form-item>textarea{
+    border:solid 1px #141414;
+    padding:0.5rem 0.5rem;
+    font-size: 1rem;
+    resize: none;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.contact-btn{
+    text-align: center;
+}
+.send-btn{
+    display: inline-block;
+    width:25vw;
+    height:5vh;
+    border-radius: 5vh;
+    font-size: 1rem;
+    color:#FFFFFF;
+    background-color: #1B1310;
+    box-shadow: 0px 0px 1.5rem #707070;
+    margin-top:1rem;
+    cursor: pointer;
+    outline: none;
+}
+.send-btn:active{
+    box-shadow: none;
+    opacity: 0.7;
+}
+
+/*footer*/
+.footer{
+    width:100%;
+    height:10vh;
+    color:white;
+    background-color:#1B1310;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*レスポンシブデザイン*/
+@media screen and (max-width: 768px){
+    .section-wrapper{
+        padding:0px 5% 150px;
+    }
+    .header{
+        padding:0px 5%;
+    }
+    .header-list{
+        display: none;
+    }
+    /*バーガーボタン*/
+    .burger-btn{
+        display: block;
+        width:3rem;
+        height:3rem;
+        padding: 0px;
+        background-color:transparent;
+        border: none;
+        position:relative;
+        z-index: 3;
+        cursor: pointer;
+        outline: none;
+    }
+    .burger-btn:active{
+        opacity: 0.7;
+    }
+    .bar{
+        display: block;
+        width:2rem;
+        height: 3px;
+        background-color: #FFFFFF;
+        position: absolute;
+        left:50%;
+        transform: translateX(-50%);
+        border-radius: 3px;
+    }
+    .top-bar{
+        top:10px;
+    }
+    .mid-bar{
+        top:50%;
+        transform: translate(-50%,-50%);
+    }
+    .bottom-bar{
+        bottom:10px;
+    }
+    .fv{
+        background-image: url(./img/fv-bgi_sp@2x.jpg);
+        /*背景画像*/
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-position:center;
+    }
+    .fv p{
+        display: block;
+        font-size: 2rem;
+        padding: 30px 40px;
+        font-weight: 400;
+    }
+    .service-item{
+        display: flex;
+        width:100%;
+        flex-direction: column;
+        margin-bottom:4rem;
+    }
+    .service-img{
+        width:100%;
+    }
+    .service-img>img{
+        width:100%;
+    }
+    .service-title{
+        margin-bottom:1rem;
+    }
+    .service-description{
+        width:100%;
+        margin-bottom: 1rem;
+    }
+    .news-list{
+        flex-direction: column;
+    }
+    .news-item{
+        margin-bottom: 3rem;
+        width:100%;
+    }
+    .news-img{
+        width:100%;
+    }
+    .news-img>img{
+        width:100%;
+    }
+    .contact-form{
+        max-width:100%;
+    }
+    .send-btn{
+        width:30vw;
+    }
+}
